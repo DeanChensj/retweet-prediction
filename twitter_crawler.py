@@ -65,12 +65,12 @@ def main():
     limit=100000
     for i in range(0,limit,batch):
         batch_user_list=all_follower_ids[i:i+batch]
-    users = api.lookup_users(user_ids=batch_user_list)
-    users_set.insert_many(list(map(lambda x:x._json,users)))
-    for index,user in enumerate(users):
-        if not user.protected:
-            get_all_tweets(user.screen_name)
-        print(time.ctime()+":"+user.screen_name+":"+str(i+index))
+        users = api.lookup_users(user_ids=batch_user_list)
+        users_set.insert_many(list(map(lambda x:x._json,users)))
+        for index,user in enumerate(users):
+            if not user.protected:
+                get_all_tweets(user.screen_name)
+            print(time.ctime()+":"+user.screen_name+":"+str(i+index))
 
 
 
