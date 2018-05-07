@@ -1,4 +1,12 @@
 .ipynb_checkpoints/*
-Theil-Sen estimator.ipynb
-hot_words.ipynb
+*.*
+!README.md
+!SIF_embedding.py
+!crawl_full_tweets.py
+!data_io.py
+!generate_dataset.py
+!kmeans.py
+!natural_language_processing.py
+!report.ipynb
+!top_1000_users_screen_names.json
 
